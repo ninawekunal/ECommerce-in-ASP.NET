@@ -1,0 +1,166 @@
+﻿.main_wrapper{
+			width: 1000px;
+			height: auto;
+			margin: auto;
+			vertical-align: baseline;
+		}
+		body{
+			background: #39C; 
+		}
+		.header_wrapper{
+			width: 1000px;
+			height: 55px;
+			background: #fff;
+
+		}
+        #loginBtn{
+            border:none;
+            padding:8px;
+        }
+        #loginBtn:hover{
+            text-decoration:underline;
+            cursor:pointer;
+        }
+        #registerBtn{
+            border:none;
+            padding:8px;
+            cursor:pointer;
+        }
+        #registerBtn:hover{
+            text-decoration:underline;
+        }
+		#navbar{
+			width: 1000px;
+			height: 50px;
+			background: #999;
+			color: #fff;
+		}
+		#menu{
+			padding: 0px;
+			line-height: 36px;
+			margin-top: 5px;
+			float: left;
+		}
+		#menu li{
+			list-style: none;
+			display: inline;
+		}
+		#menu li a{
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 10px;
+		}
+		#menu li a:hover{
+			background-color: #000; 
+			text-decoration: underline;
+
+		}
+
+		#form{
+			float: right;
+			line-height: 50px;
+			padding-right: 5px;
+		}
+		.content_wrapper{
+			width: 1000px;
+			height: auto;
+			background:#F96;
+		}
+		#write_content{
+			width: 800px;
+			background: #FCC;
+			float: right;
+		}
+		#left_sidebar{
+			width: 200px;
+			background: #000;
+			float: left;
+		}
+
+		#sidebar_title{
+			background: white;
+			color: black;
+			padding:10px;
+			font-size: 22px;
+			font-family: Book Antiqua;
+		}
+
+		#categories{
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+		}
+		#categories li{
+			list-style: none;
+			margin: 10px;
+		}
+		#categories li a{
+			color: white;
+			font-size: 20px;
+			text-decoration: none;
+			margin: 10px;
+			padding: 10px;
+		}
+		#categories li a:hover{
+			text-decoration: underline;
+			color: #f93;
+            cursor:pointer;
+		}
+		#headline{
+			background: #000;
+			color: white;
+			width: 780px;
+			height: 28px;
+			padding: 10px;
+		}
+		#headline_content{
+			float: right;
+		}
+		#products_box{
+			width: 780px;
+			padding: 10px;
+			margin-left: 30px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			text-align: center;
+            
+		}
+		#single_product{
+			float: left;
+			padding: 10px;
+			margin-right: : 10px; 
+		}
+		#single_product img{
+			border: 2px solid #333;
+		}
+		#single_product p{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		 h3{
+			font-size: 22px;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		#goToCart{
+			text-decoration: none;
+		}
+		#goToCart:hover{
+			text-decoration: underline;
+		}
+		#logout{
+			color:#f93;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		#logout:hover{
+			text-decoration: underline;
+		}
+		.footer_area{
+			width: 1000px;
+			height: 100px;
+			background: #999;
+			color: white;
+			clear: both;
+		}

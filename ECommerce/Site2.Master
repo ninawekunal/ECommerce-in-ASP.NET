@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="MasterPageDemo.Site2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .hyperlink1{
+            text-align:center;
+            margin-left:50px;
+            border:none;
+            background:none;
+            color:white;
+        }
+        .hyperlink1:hover{
+            cursor:pointer;
+            text-decoration:underline;
+            color:orange;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+    
+    <div class="main_wrapper">
+			<!-- Header starts from here -->
+			<div class="header_wrapper">
+				<a href="index.php"><img src="images/logo.jpg"></a>
+                <div style="float:right;">
+                    <b>Welcome User!  </b>
+                    <br />
+                    <button id="loginBtn"><a href="Login.aspx">Login</a></button>&nbsp;|&nbsp;<button id="registerBtn"><a href="Register.aspx">Register</a></button>&nbsp;
+                </div>
+			</div>
+			<!-- Header ends here -->
+			<!-- Navbar starts here -->
+			<div id="navbar">
+				<ul id="menu">
+					<li><a href="home.aspx">Home</a></li>
+					<li><a href="home.aspx">All products</a></li>
+					<li><a href="#">MyAccount</a></li>
+					<li><a href="#">Shopping cart</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+				<div id="form">
+						<input type="text" name="user_query" placeholder="Search a product">
+						<input type="submit" name="search" value="Search!">
+					</div>
+			</div>
+			<!-- Navbar end -->
+        <div id="write_content">
+					
+					 <div id="headline">
+					 	<div id="headline_content">
+					 		
+					 		<b style="color:skyblue;font-weight: bold;text-decoration: underline;">
+					 	</b>
+					 		<b style="color: yellow;">Shopping cart:</b>
+					 		<span>
+					 			- Items: 0  - Price: 0 <a id="goToCart" href="#" style="color:yellow;">Go to Cart!</a>
+
+					 		</span>
+					 	</div>
+					 </div>
+
+					 
+				</div>
+            
+			<div class="content_wrapper">
+				<div id="left_sidebar">
+					<div id="sidebar_title">
+						Categories
+					</div>
+                    <ul id="categories">
+						
+					    <asp:DataList ID="DataList1" runat="server" DataKeyField="cat_id" DataSourceID="SqlDataSource1" Width="49px" OnItemCommand="DataList1_ItemCommand">
+                            <ItemTemplate>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Button ID="HyperLink1" CommandArgument='<%# Eval("cat_id") %>' CommandName="cat" CssClass="hyperlink1" runat="server" Text='<%# Eval("cat_title") %>' Font-Size="Larger"></asp:Button>
+                                <br />
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDb %>" ProviderName="<%$ ConnectionStrings:myDb.ProviderName %>" SelectCommand="SELECT * FROM [Categories]"></asp:SqlDataSource>
+						
+					</ul>
+
+					<div id="sidebar_title">
+						Brands
+					</div>	
+					<ul id="categories">
+						
+						
+
+					    <asp:DataList ID="DataList2" runat="server" DataKeyField="brand_id" DataSourceID="SqlDataSource2">
+                            <ItemTemplate>
+                                <asp:Button ID="HyperLink1" runat="server" CommandArgument='<%# Eval("brand_id") %>' CommandName="brand" CssClass="hyperlink1" Font-Size="Larger" Text='<%# Eval("brand_title") %>' />
+                                <br />
+                                <br />
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:myDb %>" ProviderName="<%$ ConnectionStrings:myDb.ProviderName %>" SelectCommand="SELECT * FROM [Brands]"></asp:SqlDataSource>
+						
+						
+
+					</ul>
+
+
+				</div>
+				<div id="products_box">
+					 	<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+                         </asp:ContentPlaceHolder>
+			    </div>
+			</div>
+			<div class="footer_area">
+				<h1 style="color: black;padding-top: 30px;text-align: center;">&copy; 2019 - By Kunal Ninawe. </h1>
+			</div>
+
+		</div>
+    
+    <div>
+        
+    </div>
+    
+  
+    
+    </form>
+    
+  
+    
+</body>
+</html>

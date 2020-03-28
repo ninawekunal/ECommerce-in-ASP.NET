@@ -1,0 +1,20 @@
+﻿        .c_login{
+			padding: 10px;
+			font-size: 18px;
+		}
+		.c_login:hover{
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		table tr td{
+			padding: 10px;
+		}
+		#register{
+			text-decoration: none;
+		}
+		#forgot_pass{
+			text-decoration: none;
+		}
+		#register,#forgot_pass:hover{
+			text-decoration: underline;
+		}
